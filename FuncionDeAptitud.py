@@ -1,5 +1,5 @@
 def fitness(vector):
-    contador=0
+    contador = 0
     dim=len(vector)
     for i in range(dim):
         entr=vector[i]
