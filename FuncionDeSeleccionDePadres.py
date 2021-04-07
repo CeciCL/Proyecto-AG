@@ -1,5 +1,5 @@
 from FuncionDeAptitud import fitness
-#from FuncionDeGeneracionDePoblacion import poblacion
+from FuncionDeGeneracionDePoblacion import poblacion
 import random
 
 def SeleccionDePadres(poblacion_1):
@@ -7,7 +7,7 @@ def SeleccionDePadres(poblacion_1):
     while len(poblacion_de_papas)<len(poblacion_1):
         i = random.randrange(0,len(poblacion_1))
         mejor_papa = []
-        j = 1
+        j = -1
         while j<i:
             papa_1=poblacion_1[random.randrange(0,len(poblacion_1))]
             papa_2=poblacion_1[random.randrange(0,len(poblacion_1))]
@@ -19,7 +19,7 @@ def SeleccionDePadres(poblacion_1):
         poblacion_de_papas.append(mejor_papa)
     return poblacion_de_papas
 
-#poblacion_prueba=poblacion(8,50)
+poblacion_prueba=poblacion(8,5)
 """
 padres=[]
 poblacion_1 = poblacion(dim, cant)

@@ -5,14 +5,15 @@ def poblacion(dim , cant):
     pos = []
     for i in range(0,dim):
         pos.append(i)
-    while len(pob)!=cant:
+    while len(pob)<cant:
         indiv=[]
         for j in range(0, dim):
             valor=random.choice(pos)
             pos.remove(valor)
+            #print(pos)
             indiv.append(valor)
-        for i in range(0, dim):
-            pos.append(i)
+        for k in range(0, dim):
+            pos.append(k)
         pob.append(indiv)
 
     return pob

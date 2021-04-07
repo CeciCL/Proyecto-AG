@@ -19,13 +19,11 @@ def cruza(papa_1,papa_2):
                 conjunto_i.append(papa_2[i])
                 while papa_1[i] != papa_2[i]:
                     posicion_1=papa_1.index(papa_2[i])
-                    print(posicion_1)
                     papa_2[i]= papa_2[posicion_1]
                     conjunto_i.append(papa_2[i])
                     elementos_tocados.append(posicion_1)
             conjuntos.append(conjunto_i)
             i+=1
-    print(conjuntos)
     """
     Esta parte es para hacer los hijos
     """
