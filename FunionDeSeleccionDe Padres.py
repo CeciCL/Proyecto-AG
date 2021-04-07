@@ -1,23 +1,40 @@
-from FuncionDeGeneracionDePoblacion import poblacion as poblacion
-from FuncionDeAptitud import fitness as fitness
+from FuncionDeAptitud import fitness
+#from FuncionDeGeneracionDePoblacion import poblacion
 import random
 
-def SeleccionDePadres(dim, cant):
-    padres=[]
-    poblacion_1 = poblacion(dim, cant)
-    for i in range(0,cant):
-        papa_1= poblacion_1[random.randrange(0,cant)]
-        papa_2= poblacion_1[random.randrange(0,cant)]
+def SeleccionDePadres(poblacion_1):
+    poblacion_de_papas=[]
+    while len(poblacion_de_papas)<len(poblacion_1):
+        i=random.randrange(0,len(poblacion_1))
         mejor_papa = []
-        if fitness(papa_2) > fitness(papa_1):
-            mejor_papa = papa_1
-        else:
-            mejor_papa = papa_2
-        padres.append(mejor_papa)
-    return padres
+        j=1
+        while j<i:
+            papa_1=poblacion_1[random.randrange(0,len(poblacion_1))]
+            papa_2=poblacion_1[random.randrange(0,len(poblacion_1))]
+            if fitness(papa_2) > fitness(papa_1):
+                mejor_papa = papa_1
+            else:
+                mejor_papa = papa_2
+            j += 1
+        poblacion_de_papas.append(mejor_papa)
+    return poblacion_de_papas
+
+#poblacion_prueba=poblacion(8,50)
 """
+padres=[]
+poblacion_1 = poblacion(dim, cant)
+for i in range(0,cant):
+    papa_1= poblacion_1[random.randrange(0,cant)]
+    papa_2= poblacion_1[random.randrange(0,cant)]
+    mejor_papa = []
+    if fitness(papa_2) > fitness(papa_1):
+        mejor_papa = papa_1
+    else:
+        mejor_papa = papa_2
+    padres.append(mejor_papa)
+    return padres
+
 #seleccionador de padres
-def SeleccionDePadres(a, b):
     r1 = a
     r2 = b
     papa1 = []
