@@ -7,7 +7,7 @@ def SeleccionDePadres(poblacion_1):
     while len(poblacion_de_papas)<len(poblacion_1):
         i = random.randrange(0,len(poblacion_1))
         mejor_papa = []
-        j=1
+        j = 1
         while j<i:
             papa_1=poblacion_1[random.randrange(0,len(poblacion_1))]
             papa_2=poblacion_1[random.randrange(0,len(poblacion_1))]
