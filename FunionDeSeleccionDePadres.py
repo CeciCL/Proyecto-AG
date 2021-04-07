@@ -3,7 +3,7 @@ from FuncionDeAptitud import fitness
 import random
 
 def SeleccionDePadres(poblacion_1):
-    poblacion_de_papas=[]
+    poblacion_de_papas = []
     while len(poblacion_de_papas)<len(poblacion_1):
         i=random.randrange(0,len(poblacion_1))
         mejor_papa = []
