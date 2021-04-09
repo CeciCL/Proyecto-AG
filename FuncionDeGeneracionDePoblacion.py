@@ -1,19 +1,18 @@
 import random
 
-def poblacion(dim , cant):
-    pob = []
+def poblacion(dimension , cantidad_de_individuos):
+    poblacion = []
     pos = []
-    for i in range(0,dim):
+    for i in range(0, dimension):
         pos.append(i)
-    while len(pob)<cant:
-        indiv=[]
-        for j in range(0, dim):
-            valor=random.choice(pos)
+    while len(poblacion) < cantidad_de_individuos:
+        individuo = []
+        for j in range(0, dimension):
+            valor = random.choice(pos)
             pos.remove(valor)
             #print(pos)
-            indiv.append(valor)
-        for k in range(0, dim):
+            individuo.append(valor)
+        for k in range(0, dimension):
             pos.append(k)
-        pob.append(indiv)
-
-    return pob
+        poblacion.append(individuo)
+    return poblacion
