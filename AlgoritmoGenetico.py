@@ -85,4 +85,5 @@ Y = np.array(individuo_promedio_por_generacion)
 x = np.linspace(0, 49, 50)
 y = mejor_individuo_por_generacion
 plt.plot(x, y)
+plt.title('Gráfica de convergencia')
 plt.show()
