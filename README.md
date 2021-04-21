@@ -4,6 +4,9 @@
 
 **¿Qué es un algoritmo genético?** 
 Sabemos que un algoritmo es una serie de pasos que describen el proceso de búsqueda de una solución a un problema concreto, entonces un algoritmo genético(AG) es serie de pasos que usan mecanismos que simulan los de la evolución de las especies de la biología para formular dichos pasos, los cuales describen el proceso de búsqueda de una solución a un problema concreto.  
+El siguiente diagrama muestra de manera general el funiconamiento de esté algoritmo genético.
+
+![Diagrama_AG](https://user-images.githubusercontent.com/79228097/114244929-08922f00-9955-11eb-9b76-05bad8e635f6.png)
 
 Ahora veamos en que consiste cada una de las técnicas que se usaron en este programa. 
 
