@@ -22,12 +22,13 @@ Para este programa en particular fue creado para evaluar un individuo, el cual e
  1. Calcular el fitness de cada uno de los individuos
  2. Ordenarlos de manera ascendente
  3. Calcular la probabilidad de ser selecionado de cada uno de los individuos con la formula:
+ 
 ![Formula_SP_AG](https://user-images.githubusercontent.com/79228097/115813175-50cf3980-a3b8-11eb-9731-c73e5ac8f2fc.png)
 
- 5. Calcular la probabilidad acumulada
- 6. Generar un número aleatorio
- 7. Verificar quien es el individuo que alcanza el número aleatorio
- 8. Selecionar el cromosoma con mejor aptitud
+ 4. Calcular la probabilidad acumulada
+ 5. Generar un número aleatorio
+ 6. Verificar quien es el individuo que alcanza el número aleatorio
+ 7. Selecionar el cromosoma con mejor aptitud
  
 **Función de cruza:(Cíclica)** 
 La función de cruza cíclica trabaja dividiendo los elementos en ciclos. Un ciclo es un subconjunto de elementos que tiene la propiedad de que cada elemento siempre ocurre emparejado con otro elemento del mismo ciclo, cuando los dos padres están alineados. Habiendo dividido la permutación en ciclos, la descendencia se crea seleccionando ciclos alternos de cada padre. El procedimiento para construir ciclos es el siguiente: 
