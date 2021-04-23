@@ -43,3 +43,5 @@ En la función de mutación de tipo mezcla toda la cadena o algún subconjunto d
 
 **Función de reemplazo:(Generacional)**
 La función de reemplazo generacional consiste en que todos los padres mueran y los hijos quedan como la población para la siguiente generación. 
+
+Este Algotirmo tal y como se mostro en la imagen inicial genera una población inicial, despues calula el fitness de cada uno de los individuos, para posteriormente pazar a realizar la selección de padres, más adelante cruza los padres seleccionados, luego relaiza la mutación, para despues realizar el remplazo, al hacer todo eso se genera una generación de indivuduos y en esta galgoritmo genetico el proceso desde la seleción de paddres hasta el reemplazo se repite hast aque se llegan a las 50 generaciones deseadas.
