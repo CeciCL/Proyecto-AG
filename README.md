@@ -21,7 +21,8 @@ Para este programa en particular fue creado para evaluar un individuo, el cual e
  El peocedimiento para llevar a cabo este ste método de selección de padres consiste en:
  1. Calcular el fitness de cada uno de los individuos
  2. Ordenarlos de manera ascendente
- 3. Calcular la probabilidad de ser selecionado de cada uno de los individuos con la formula
+ 3. Calcular la probabilidad de ser selecionado de cada uno de los individuos con la formula:
+![Formula_SP_AG](https://user-images.githubusercontent.com/79228097/115813175-50cf3980-a3b8-11eb-9731-c73e5ac8f2fc.png)
 
  5. Calcular la probabilidad acumulada
  6. Generar un número aleatorio
@@ -30,14 +31,14 @@ Para este programa en particular fue creado para evaluar un individuo, el cual e
  
 **Función de cruza:(Cíclica)** 
 La función de cruza cíclica trabaja dividiendo los elementos en ciclos. Un ciclo es un subconjunto de elementos que tiene la propiedad de que cada elemento siempre ocurre emparejado con otro elemento del mismo ciclo, cuando los dos padres están alineados. Habiendo dividido la permutación en ciclos, la descendencia se crea seleccionando ciclos alternos de cada padre. El procedimiento para construir ciclos es el siguiente: 
-1. Comience con la primera posición no utilizada y el primer alelo de PI. 
-2. Mira el alelo en la misma posición en P2 
-3. Vaya a la posición con el mismo alelo en PI 
+1. Comience con la primera posición no utilizada y el primer alelo del padre 1. 
+2. Mira el alelo en la misma posición en padre 2.
+3. Vaya a la posición con el mismo alelo en padre 1.
 4. Agrega este alelo al ciclo. 
-5. Repita los pasos 2 a 4 hasta llegar al primer alelo de PI 
+5. Repita los pasos 2 a 4 hasta llegar al primer alelo de padre 1. 
 
 **Función de mutación:(Mezcla)** 
-En la función de mutación de tipo mezcla toda la cadena o algún subconjunto de valores son elegidos al azar dentro de ella, tienen sus posiciones mezcladas. 
+En la función de mutación de tipo mezcla toda la cadena o algún subconjunto de valores que son elegidos al azar dentro de ella, tienen sus posiciones mezcladas. 
 
 **Función de reemplazo:(Generacional)**
 La función de reemplazo generacional consiste en que todos los padres mueran y los hijos quedan como la población para la siguiente generación. 
