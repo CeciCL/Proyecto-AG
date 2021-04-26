@@ -1,6 +1,6 @@
 import random
 
-def poblacion(dimension , cantidad_de_individuos):
+def poblacion(dimension, cantidad_de_individuos):
     poblacion = []
     pos = []
     for i in range(0, dimension):
