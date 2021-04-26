@@ -7,11 +7,11 @@ def poblacion(dimension, cantidad_de_individuos):
         pos.append(i)
     while len(poblacion) < cantidad_de_individuos:
         individuo = []
-        for j in range(0, dimension):
+        for i in range(0, dimension):
             valor = random.choice(pos)
             pos.remove(valor)
             individuo.append(valor)
-        for k in range(0, dimension):
-            pos.append(k)
+        for j in range(0, dimension):
+            pos.append(j)
         poblacion.append(individuo)
     return poblacion
