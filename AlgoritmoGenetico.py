@@ -8,10 +8,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 print('Hola,bienvenido a mi algoritmo génetico,aquí vamos a ver el problema de 0 colisiones entre reinas en un tablero de ajedrez.\n'
-      'Lo primero que vamos a hacer es crear nuestra población,para eso voy a necesitar tú ayuda,pues vas a elegir el número de individuos que va a tener la población,dicho número tiene que ser par.')
-cant=int(input('Por favor ingresa el número de individuos que deseas que tenga la población.'))
+      'Este algoritmo crea una población inicial de 100 elementos,a los cuales despues procede a realizar las funciones de aptitud,\n'
+      'selección de padres,cruza,mutación y reemplazo,todo esto lo realiza para 50 generaciones, despues de que realiza todo este proceso\n'
+      'te muestra una tabla con el mejor individuo(fitness),el peor individuo(fitness),el individuo promedio(fitness) y la desviación estandar,\n'
+      'para cada una de las generaciones y tambien te muestra una gráfica de convergencia\n')
 
-poblacion_inicial = poblacion(8,cant)
+poblacion_inicial = poblacion(8, 100)
 mejor_individuo_por_generacion = []
 peor_individuo_por_generacion = []
 individuo_promedio_por_generacion = []
@@ -34,7 +36,7 @@ for i in range(50):
     poblacion_inicial = poblacion_de_mutados
     generaciones.append(poblacion_inicial)
 
-    #Fitness del mejor individuo por generacion
+    #Fitness del mejor individuo por generación
     fitness_poblacion = []
     for k1 in range(len(poblacion_inicial)):
         fitness_indivicual = fitness(poblacion_inicial[k1])
@@ -50,7 +52,7 @@ for i in range(50):
     promedio = sum(fitness_poblacion)/len(fitness_poblacion)
     individuo_promedio_por_generacion.append(promedio)
 
-    #Desviacion estandar
+    #Desviación estandar
     suma = 0
     for i in range(len(fitness_poblacion)):
         desv = (fitness_poblacion[i] - promedio) ** 2
@@ -69,7 +71,7 @@ tabla_1 = pd.DataFrame(tabla)
 tabla_1.index = lis_indices
 print(tabla_1)
 
-#Esto es para hacer la grafica
+#Esto es para hacer la gráfica
 X = np.array(lis_indices)
 Y = np.array(individuo_promedio_por_generacion)
 x = np.linspace(0, 49, 50)
