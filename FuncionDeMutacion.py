@@ -8,13 +8,12 @@ def mutacion(poblacion):
     return poblacion_de_mutados
 
 def mutacion_1(vector):
-    posicion_1 = random.randrange(0,8)
-    posicion_2 = random.randrange(0,8)
+    posicion_1 = random.randrange(0, 8)
+    posicion_2 = random.randrange(0, 8)
     vectornuevo = []
     vector_a = []
-    vector_b = []
     if posicion_1 < posicion_2:
-        for i in range(0,posicion_1):
+        for i in range(0, posicion_1):
             vectornuevo.append(vector[i])
         for i in range(posicion_1, posicion_2 + 1):
             vector_a.append(vector[i])
