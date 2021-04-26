@@ -7,17 +7,17 @@ def SeleccionDePadres(poblacion):
     """
     poblacion_en_orden = sorted(poblacion, key=fitness)
     """
-    Calcular la probabilidad de ser selccionado y probabilidad acumulada
+    Calcular la probabilidad de ser seleccionado y probabilidad acumulada
     """
     prob_de_seleccion = []
     prob_acumulada = []
-    for i in range(1, len(poblacion) + 1):
-        p_pos = (len(poblacion) - i + 1) / ((len(poblacion) * (len(poblacion) + 1)) / 2)
+    for i in range(1, len(poblacion)+1):
+        p_pos = (len(poblacion)-i+1) / ((len(poblacion)*(len(poblacion)+1)) / 2)
         prob_de_seleccion.append(p_pos)
         p_acum = sum(prob_de_seleccion)
         prob_acumulada.append(p_acum)
     """
-    Generar dos números random y selelcionar los padres segun la probabilidad acumulada
+    Generar dos números random y seleccionar los padres según la probabilidad acumulada
     """
     poblacion_de_padres = []
     while len(poblacion_de_padres) < int(len(poblacion) / 2):
