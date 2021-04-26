@@ -10,7 +10,6 @@ def poblacion(dimension , cantidad_de_individuos):
         for j in range(0, dimension):
             valor = random.choice(pos)
             pos.remove(valor)
-            #print(pos)
             individuo.append(valor)
         for k in range(0, dimension):
             pos.append(k)
